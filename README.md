@@ -1,5 +1,5 @@
 # 参考[dndx/nchnroutes](https://github.com/dndx/nchnroutes)及[ikreva/nchnroutes2](https://github.com/ikreva/nchnroutes2)j进行修改
-# 引用[pmkol/easymosdns](https://github.com/pmkol/easymosdns)中的China_ip_list替代原list
+# 引用[pmkol/easymosdns](https://github.com/pmkol/easymosdns)中的China_ip_list抽取出ipv4地址替代原list
 
 # nchnroutes
 
