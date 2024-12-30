@@ -1,3 +1,6 @@
+# 参考修改[dndx/nchnroutes](https://github.com/dndx/nchnroutes)及[ikreva/nchnroutes2](https://github.com/ikreva/nchnroutes2)
+# 引用[pmkol/easymosdns](https://github.com/pmkol/easymosdns)中的China_ip_list替代原list
+
 # nchnroutes
 
 Similar to chnroutes, but instead generates routes that are not originating from Mainland
