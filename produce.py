@@ -9,7 +9,7 @@ parser.add_argument('--exclude', metavar='CIDR', type=str, nargs='*',
                     help='IPv4 ranges to exclude in CIDR format')
 parser.add_argument('--next', default="wg0", metavar = "INTERFACE OR IP",
                     help='next hop for where non-China IP address, this is usually the tunnel interface')
-parser.add_argument('--ipv4-list', choices=['apnic', 'cn'], default=['cn'], nargs='*',
+parser.add_argument('--ipv4-list', choices=['apnic', 'cn'], default=['apnic', 'cn'], nargs='*',
                     help='IPv4 lists to use when subtracting China based IP, multiple lists can be used at the same time (default: apnic cn)')
 
 args = parser.parse_args()
@@ -100,7 +100,7 @@ with open("ipv4-address-space.csv", newline='') as f:
             cidr = "%s.0.0.0%s" % (block[:3].lstrip("0"), block[-2:], )
             root.append(Node(IPv4Network(cidr)))
 
-'''
+
 with open("delegated-apnic-latest") as f:
     for line in f:
         if 'apnic' in args.ipv4_list and "apnic|CN|ipv4|" in line:
@@ -114,7 +114,7 @@ with open("delegated-apnic-latest") as f:
             a = "%s/%s" % (line[3], line[4])
             a = IPv6Network(a)
             subtract_cidr(root_v6, (a,))
-'''
+
 if 'cn' in args.ipv4_list:
     with open("china_ip_list.txt") as f:
         for line in f:
