@@ -1,6 +1,6 @@
 produce:
 	git pull
-	# curl -o delegated-apnic-latest https://ftp.apnic.net/stats/apnic/delegated-apnic-latest
+	curl -o delegated-apnic-latest https://ftp.apnic.net/stats/apnic/delegated-apnic-latest
 	curl -o china_ip_list_all.txt https://raw.githubusercontent.com/pmkol/easymosdns/rules/china_ip_list.txt
 	sed -e '/:/d' china_ip_list_all.txt > china_ip_list.txt
 	curl -o ipv4-address-space.csv https://www.iana.org/assignments/ipv4-address-space/ipv4-address-space.csv
